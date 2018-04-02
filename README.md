@@ -1,10 +1,10 @@
 # Node-With-MongoDB-And-Mongoose
 
-##Introduction
+## Introduction
 
 In this post, we are going to see how we can use a MongoDB on our Node JS application with the help of the package Mongoose. We will also be covering some facts about MongoDB so that as a reader, you will understand why we had chosen MongoDB as our backend. We will be going through some steps to install the required packages using a node package manager terminal, so please be with me. At the end of this article, I guarantee that you will be proficient on how to connect a MongoDB in our Node JS application. I hope you will like this article.
 
-##Why MongoDB?
+## Why MongoDB?
 
 Here, I am going to list down the reasons why I had chosen MongoDB.
 
@@ -13,11 +13,11 @@ Here, I am going to list down the reasons why I had chosen MongoDB.
 - Everything is JSON, even the data and collections are stored as JSON
 - Since the data is stored as JSON, no more conversions are needed. We can directly use it in our application.
 
-##Background
+## Background
 
 Node JS has become a trend now, thus some most used databases. One of the recommended database for a Node application is MongoDB. As we discussed a MongoDB doesn’t have any structure inbuilt, here we are going to use a package called Mongoose, with that we can create some structure for our Database. Let’s just skip the talking and start developing.
 
-##Setting up Node application
+## Setting up Node application
 
 To get started with the Node JS, create a folder and name as per your wish, this is going to be our project directory. Here I am going to use one of my favorite editor, Visual Studio Code. Now please point to your project container, and run the command below.
 
@@ -48,7 +48,7 @@ Let’s review our package.json file.
 "license": "ISC" 
 }`
  
-##Getting the required packages
+## Getting the required packages
 
 Now that we have the application ready, let’s get the required packages ready.
 
@@ -60,7 +60,7 @@ This will create a new folder npm_modules on your project directory where you ca
 
 The above command will add the package express to our application.
 
-##Creating the Node App
+## Creating the Node App
 
 Now we can create our server.js file where we are going to write most of our application code.
 
@@ -91,7 +91,7 @@ at Module._compile (module.js:641:30)
 at Object.Module._extensions..js (module.js:652:10)
 at Module.load (module.js:560:32)”`
 
-##Setting up database
+## Setting up database
 
 Now that we have our application ready, let’s go and create our database. I am going to use mLab for creating the database. If you have not installed MongoDB on your machine, I strongly recommend creating a database in mLab. I had created a database there and have got my connection string as preceding.
 
@@ -99,7 +99,7 @@ Now that we have our application ready, let’s go and create our database. I am
 
 We will be updating the connection string with actual DB user and password later. Please make sure that you are creating a user for your DB and remember the password.
 
-##Creating a Mongoose model
+## Creating a Mongoose model
 
 Let’s create a Mongoose model and set up our connection string now, which is going to be our collection. No worries, it is just a JavaScript model.
 
@@ -118,7 +118,7 @@ Please be noted that, when you move the codes to production, make sure that your
 console.log("DB is connected") 
 })`
  
-##Setup the data
+## Setup the data
 
 We have our model ready, what else is needed now? Yes, you are right, we need data.
 
@@ -127,7 +127,7 @@ firstName: "Sibeesh",
 lastName: "Venu" 
 }`
 
-##Inserting the data into MongoDB
+## Inserting the data into MongoDB
 
 We have got everything ready, we can insert the model now. Let’s do the saving logic now.
 
@@ -140,7 +140,7 @@ var user = new User(dummyUser);
 user.save(); 
 }`
  
-##Verify the data
+## Verify the data
 
 Once you run your application, go to your database and check for the entries there. I am sure there will be a new collection “User” and our inserted data. As I am using mLab database, here is how my data saved.
 
